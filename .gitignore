@@ -1,0 +1,5 @@
+# Don't commit these
+lazy-lock.json.bak
+.luarc.json
+spell/
+*.log
