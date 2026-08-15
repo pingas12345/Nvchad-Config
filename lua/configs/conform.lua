@@ -1,14 +1,16 @@
-local options = {
+local conform = require("conform")
+
+conform.setup({
   formatters_by_ft = {
     -- lua        = { "stylua" },
-    python     = { "ruff_format", "black" }, -- ruff first, black as fallback
+    python     = { "ruff_fix", "ruff_format", "ruff_organize_imports" }, 
     c          = { "clang-format" },
     cpp        = { "clang-format" },
-    javascript = { "prettierd", "prettier" },
-    typescript = { "prettierd", "prettier" },
-    json       = { "prettierd", "prettier" },
-    yaml       = { "prettierd", "prettier" },
-    -- markdown   = { "prettierd", "prettier" },
+    javascript = { "prettierd" },
+    typescript = { "prettierd" },
+    json       = { "prettierd" },
+    yaml       = { "prettierd" },
+    -- markdown   = { "prettierd" },
     sh         = { "shfmt" },
     bash       = { "shfmt" },
   },
@@ -18,6 +20,4 @@ local options = {
     timeout_ms = 500,
     lsp_fallback = true,
   },
-}
-
-return options
+})
