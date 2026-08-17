@@ -24,6 +24,9 @@ ignore = [
 ]
 fixable = ["ALL"]
 
+[lint.pydocstyle]
+convention = "google"
+
 [format]
 quote-style = "double"
 indent-style = "space"
