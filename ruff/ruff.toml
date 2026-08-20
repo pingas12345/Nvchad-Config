@@ -16,11 +16,12 @@ exclude = [
 
 [lint]
 select = [
-  "E", "W", "F", "I", "B", "C4", "UP", "SIM", "RUF", "RET", "D", "C"
+  "E", "W", "F", "I", "B", "C4", "UP", "SIM", "RUF", "RET", "D", "C", "PL"
 ]
 ignore = [
-  "E501",
-  "B008",
+  "E501",  # don't nag about line length (formatter handles it)
+  "B008",  # allow function calls in default arguments
+  "RET504",   # unnecessary assignment before return
 ]
 fixable = ["ALL"]
 
